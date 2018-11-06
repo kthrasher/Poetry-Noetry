@@ -1,0 +1,31 @@
+import random as r
+import pronouncing as p 
+
+poem = """
+All this spring at Clothes Mart, 
+there's a clothes {0}.
+
+Come on down to the clothes section.
+I just put it on for {1}.
+
+Now tell me about this summit.
+Cutting my cords, they {2}.
+
+The casualties would be in the "Brazilians" 
+because you're {3}
+
+You're into lame stuff, Morty.
+You're into {4} stuff, Morty.
+
+You're a civil servant.
+We're technically your {5}.
+
+"""
+mart_rhyme = r.choice(p.rhymes("mart"))
+section_rhyme = r.choice(p.rhymes("section"))
+summit_rhyme = r.choice(p.rhymes("summit"))
+brazilians_rhyme = r.choice(p.rhymes("brazilians"))
+lame_rhyme = r.choice(p.rhymes("lame"))
+servant_rhyme = r.choice(p.rhymes("servant"))
+
+print(poem.format(mart_rhyme, section_rhyme, summit_rhyme, brazilians_rhyme, lame_rhyme, servant_rhyme))
